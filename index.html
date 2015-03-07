@@ -1,0 +1,100 @@
+<style>
+    .playerArea--active {
+        border: 2px solid red;
+    }
+    .card-slot,
+    .deck {
+        padding: 20px;
+        margin: 20px;
+        border-radius: 20px;
+        float: left;
+        position: relative;
+        background: #000;
+        height: 200px;
+        width: 80px;
+    }
+    .card-slot[data-bonus="-1"] {
+        background: #ccc;
+    }
+    .card-cost,
+    .card-bonus,
+    .token {
+        border: 1px solid #000;
+        height: 20px;
+        width: 20px;
+        line-height: 20px;
+        text-align: center;
+        margin: 5px;
+    }
+    .card-cost,
+    .toke {
+        border-radius: 50%;
+        float: left;
+    }
+    .card-cost-wrapper {
+        overflow: hidden;
+    }
+    .card-cost--type0,
+    .card-bonus--type0,
+    .token-type0,
+    .card-slot[data-bonus="0"] {
+        background: red;
+        color: #fff;
+    }
+    .card-cost--type1,
+    .card-bonus--type1,
+    .token-type1,
+    .card-slot[data-bonus="1"] {
+        background: green;
+        color: #fff;
+    }
+    .card-cost--type2,
+    .card-bonus--type2,
+    .token-type2,
+    .card-slot[data-bonus="2"] {
+        background: blue;
+        color: #fff;
+    }
+    .card-cost--type3,
+    .card-bonus--type3,
+    .token-type3,
+    .card-slot[data-bonus="3"] {
+        background: yellow;
+        color: #000;
+    }
+    .card-cost--type4,
+    .card-bonus--type4,
+    .token-type4,
+    .card-slot[data-bonus="4"] {
+        background: black;
+        color: #fff;
+    }
+    .token-type5 {
+        background: #f0f;
+        color: #fff;
+    }
+    .card-cost:after {
+        content: attr(data-value);   
+    }
+    .card-prestige {
+        border: 1px solid #000;
+        height: 20px;
+        width: 20px;
+        line-height: 20px;
+        text-align: center;
+        background: #f00;
+        color: #000;
+        position: absolute;
+        top: -5px;
+        right: -5px;
+    }
+    .card-prestige:after {
+        content: attr(data-prestige);   
+    }
+    .deck-wrapper {
+        overflow: hidden;
+    }
+</style>
+<div id="gamebody"></div>
+<script src="cards.js"></script>
+<script src="app.js"></script>
